@@ -1,23 +1,3 @@
-# C++ scheduler
-
-C++17 scheduler. 
-
-## Dependencies
-
-* C++17
-* Boost Range
-* Boost Core
-* Boost Uuid
-* Boost Format
-* Boost Fiber (for Fiber Engine only)
-* Boost Process (for Process Engine only)
-
-
-
-## Usage example
-
-```c++
-
 #include <iostream>
 #include <sstream>
 #include <iomanip>
@@ -71,13 +51,3 @@ int main()
 
     return 0;
 }
-
-
-```
-
-
-## API
-
-## License
-
-Public Domain License

@@ -23,29 +23,36 @@ public:
 };
 
 
+class EngineIsFull: public std::runtime_error {
+public:
+    typedef std::runtime_error super;
+
+    EngineIsFull(const std::string& what_arg):
+        super(what_arg)
+    {}
+
+    EngineIsFull(const char* what_arg):
+        super(what_arg)
+    {}
+};
+
+
 class BaseEngine: private boost::noncopyable {
 public:    
     typedef std::mutex mutex_type;
     typedef std::condition_variable condition_variable_type;
 
-    virtual void submit(std::function<void()> func) = 0;
-    virtual void shutdown() = 0;
-    virtual void wait() = 0;
-};
-
-
-class BlockingEngine: public BaseEngine {
 public:
-    void submit(std::function<void()> func) override
+    void submit(const std::function<void()>& func)
     {
         func();
     }
 
-    void shutdown() override
+    void shutdown()
     {        
     }
 
-    void wait() override
+    void wait()
     {        
     }
 };

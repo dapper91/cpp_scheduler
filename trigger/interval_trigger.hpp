@@ -2,7 +2,7 @@
 
 #include <chrono>
 
-#include <base_trigger.hpp>
+#include <trigger/base_trigger.hpp>
 
 
 namespace sched {
