@@ -5,11 +5,12 @@ C++17 scheduler.
 ## Dependencies
 
 * C++17
-* Boost Fiber (for Fiber Engine only)
 * Boost Range
 * Boost Core
 * Boost Uuid
 * Boost Format
+* Boost Fiber (for Fiber Engine only)
+* Boost Process (for Process Engine only)
 
 
 
