@@ -36,13 +36,13 @@ int main()
     });
 
     scheduler.add_job({
-        std::bind(print, "2 second has been passed"),
+        std::bind(print, "2 seconds have been passed"),
         std::make_unique<sched::IntervalTrigger<>>(2s),
         "2 sec interval task"
     });
 
     scheduler.add_job({
-        std::bind(print, "3 second has been passed"),
+        std::bind(print, "3 seconds have been passed"),
         std::make_unique<sched::IntervalTrigger<>>(3s),
         "3 sec interval task"
     });
